@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    /* set REM base value */
+    font-size: 15px;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 4rem 0;
+    margin: 0;
+    color: #f1f1f1;
+    background: #191a21;
+    font-family: "Poppins";
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h2, var {
+    text-align: center;
+    display: block;
+}
+
+p, h2 {
+    margin:0;
+}
+
+.background {
+    position: fixed;
+    z-index: -1;
+    top: -100px;
+    left: -100px;
+    right: -100px;
+    height: 60vh;
+    rotate: -4deg;
+    background-color: #ec2121;
+}
+
+.card {
+    display: grid;
+    place-items: center;
+    gap: .75rem;
+    order: 2;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;
+    background: #fff;
+    color: #191a21;
+
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+}
+
+.card-header{
+    background-color: gray;
+    height: 15rem;
+    width: 100%;
+    margin: 0;
+    border-radius: 6px 6px 0 0;
+    margin-top: -2px;
+    background-position: top center;
+    background-size: cover;
+}
+
+.card-body {
+    padding: 40px 40px 60px 40px;
+}
+
+.card.primary {
+    order: 1;
+}
+var {
+    margin-left: 1rem;
+}
+.card.primary var {
+    font-size: 4rem;
+    
+}
+
+.card var {
+    color: #ec2121;
+    font-weight: 400;
+    font-size: 3rem;
+    font-style: normal;
+    margin-bottom: .75rem;
+}
+
+.card var small {
+    font-size: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    
+}
+
+ul li {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+ul li img {
+    width: 1rem;
+    margin-right: 5px;
+    padding-top: 3px;
+}
+
+.card button {
+    display: grid;
+    place-items: center;
+    min-width: 200px;
+    padding: 14px 0;
+    border-radius: 6px;
+    border: 2px solid #ec2121;
+    background: transparent;
+    color: #ec2121;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.card.primary button {
+    background: #ec2121;
+    color: #191a21;
+}
+
+.card.primary button:hover {
+    background-color: #191a21;
+    color: #ec2121;
+    border: 2px solid #191a21;
+    transition: .3s ease-in-out;
+    font-weight: 500;
+}
+
+.card button:hover {
+    background-color: #191a21;
+    color: #ec2121;
+    border: 2px solid #191a21;
+    transition: .3s ease-in-out;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 600px ) {
+    .card {
+        width: 80vw;
+    }
+}
+@media screen and (min-width: 600px ) {
+    .card {
+        width: 60vw;
+    }
+}
+
+@media screen and (min-width: 960px ) {
+    body {
+        padding: 0;
+        flex-direction: row;
+    }
+
+    body, html {
+        height: 100%;
+    }
+
+    .card {
+        width: 350px;
+        max-width: 400px;
+        margin: 0;
+    }
+
+    .card.primary {
+        order: 2;
+    }
+}
